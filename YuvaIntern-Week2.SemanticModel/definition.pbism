@@ -1,0 +1,8 @@
+{
+  "version": "1.0",
+  "settings": {
+    "autoSync": true,
+    "trace": false,
+    "culture": "en-US"
+  }
+}

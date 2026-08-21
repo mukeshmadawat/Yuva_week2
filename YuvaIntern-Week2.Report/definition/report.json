@@ -1,0 +1,91 @@
+{
+  "name": "Construction Safety & Inspection Dashboard",
+  "theme": "Corporate Construction",
+  "background": "#FFFFFF",
+  "title": "Construction Safety & Inspection Dashboard",
+  "style": {
+    "fontFamily": "Segoe UI",
+    "accentColor": "#0057B8",
+    "backgroundColor": "#FFFFFF",
+    "roundedCards": true,
+    "consistentSpacing": true,
+    "cardPadding": "12px"
+  },
+  "page": {
+    "name": "Executive Dashboard",
+    "title": "Executive Dashboard",
+    "layout": "dashboard",
+    "visuals": [
+      {
+        "type": "card",
+        "title": "Total Inspections",
+        "measure": "Total Inspections",
+        "position": { "x": 0, "y": 0, "width": 220, "height": 110 }
+      },
+      {
+        "type": "card",
+        "title": "Open Issues",
+        "measure": "Open Issues",
+        "position": { "x": 240, "y": 0, "width": 220, "height": 110 }
+      },
+      {
+        "type": "card",
+        "title": "Closed Issues",
+        "measure": "Closed Issues",
+        "position": { "x": 480, "y": 0, "width": 220, "height": 110 }
+      },
+      {
+        "type": "card",
+        "title": "Open Rate",
+        "measure": "Open Rate",
+        "position": { "x": 720, "y": 0, "width": 220, "height": 110 }
+      },
+      {
+        "type": "donut",
+        "title": "Status Distribution",
+        "legend": "Status Changed",
+        "values": "Count of Ref",
+        "position": { "x": 0, "y": 140, "width": 360, "height": 300 }
+      },
+      {
+        "type": "line",
+        "title": "Monthly Inspections",
+        "xAxis": "Month Name",
+        "yAxis": "Count of Ref",
+        "position": { "x": 380, "y": 140, "width": 560, "height": 300 }
+      },
+      {
+        "type": "horizontalBar",
+        "title": "Location-wise Issues",
+        "yAxis": "Location",
+        "xAxis": "Count of Ref",
+        "sort": "descending",
+        "position": { "x": 0, "y": 470, "width": 480, "height": 260 }
+      },
+      {
+        "type": "column",
+        "title": "Issues by Priority",
+        "xAxis": "Priority",
+        "yAxis": "Count of Ref",
+        "position": { "x": 500, "y": 470, "width": 440, "height": 260 }
+      }
+    ],
+    "slicers": [
+      {
+        "field": "Month Name",
+        "title": "Month Name",
+        "position": { "x": 0, "y": 760, "width": 260, "height": 120 }
+      },
+      {
+        "field": "Location",
+        "title": "Location",
+        "position": { "x": 290, "y": 760, "width": 260, "height": 120 }
+      },
+      {
+        "field": "Priority",
+        "title": "Priority",
+        "position": { "x": 580, "y": 760, "width": 260, "height": 120 }
+      }
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+model Model {
+  version: '1.0.0'
+  culture: en-US
+  dataAccessOptions:
+    legacyRedirects: true
+    returnErrorValuesAsNull: true
+
+  table Construction_Data_PM_Tasks_All_Projects {
+    measure 'Total Inspections' = COUNTROWS('Construction_Data_PM_Tasks_All_Projects')
+    measure 'Count of Ref' = COUNT('Construction_Data_PM_Tasks_All_Projects'[Ref])
+    measure 'Open Issues' = CALCULATE(
+      COUNTROWS('Construction_Data_PM_Tasks_All_Projects'),
+      'Construction_Data_PM_Tasks_All_Projects'[Status Changed] = "Open"
+    )
+    measure 'Closed Issues' = CALCULATE(
+      COUNTROWS('Construction_Data_PM_Tasks_All_Projects'),
+      'Construction_Data_PM_Tasks_All_Projects'[Status Changed] = "Closed"
+    )
+    measure 'Open Rate' = DIVIDE([Open Issues], [Total Inspections], 0)
+      formatString: "0.0%"
+
+    column 'Ref' {
+      dataType: string
+      sourceColumn: "Ref"
+    }
+
+    column 'Status Changed' {
+      dataType: string
+      sourceColumn: "Status Changed"
+    }
+
+    column 'Location' {
+      dataType: string
+      sourceColumn: "Location"
+    }
+
+    column 'Month Name' {
+      dataType: string
+      sourceColumn: "Month Name"
+    }
+
+    column 'Priority' {
+      dataType: string
+      sourceColumn: "Priority"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "version": "1.0",
+  "artifacts": [
+    {
+      "report": {
+        "path": "YuvaIntern-Week2.Report"
+      }
+    },
+    {
+      "semanticModel": {
+        "path": "YuvaIntern-Week2.SemanticModel"
+      }
+    }
+  ],
+  "settings": {
+    "enableAutoRecovery": true
+  }
+}
